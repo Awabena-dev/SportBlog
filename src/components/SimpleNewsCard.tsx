@@ -14,7 +14,7 @@ const SimpleNewsCard = ({ cover, date, title }: SimpleNews) => {
 
             {/* Content */}
             <div className='relative z-20'>
-                <p className='body-6 text-secondray font-medium line-clamp-1'>
+                <p className='body-6 text-secondary font-medium line-clamp-1'>
                     {date}
                 </p>
                 <h2 className='text-black body-4 line-clamp-2'>
