@@ -54,7 +54,7 @@ function Navbar() {
     };
 
     return (
-        <header className='fixed bg-primary-50 top-0 left-0 w-full  h-23'>
+        <header className='fixed bg-primary-50 top-0 left-0 w-full  h-23 z-99'>
             <div className='max-wrapper flex items-center justify-between h-full'>
 
                 {/* Logo */}
