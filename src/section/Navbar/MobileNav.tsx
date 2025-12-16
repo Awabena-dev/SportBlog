@@ -1,8 +1,8 @@
+"use client"
 import { cn } from '@/lib/utils'
 import { X } from 'lucide-react'
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import React from 'react'
 
 
 type navLinks = {

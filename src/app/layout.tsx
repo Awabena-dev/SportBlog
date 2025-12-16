@@ -1,12 +1,19 @@
 import type { Metadata } from "next";
-import { DM_Sans } from "next/font/google";
+import { DM_Sans, Squada_One } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/section/Navbar/Navbar";
 
 
 
+
+const squada = Squada_One({
+  weight: ['400'],
+  subsets: ['latin'],
+  variable: '--font-squada-one'
+})
+
 const fontDm = DM_Sans({
-  weight: ["400" , "500" , "600" ,"700" ,"800" ,"900" ,"1000"],
+  weight: ["400", "500", "600", "700", "800", "900", "1000"],
   subsets: ['latin'],
   variable: "--font-dm"
 })
@@ -26,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${fontDm.variable} antialiased`}
+        className={`${fontDm.variable} ${squada.variable} antialiased`}
       >
         <Navbar />
         {children}

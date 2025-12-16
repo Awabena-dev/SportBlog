@@ -93,9 +93,10 @@
   
   --color-secondray: #262626;
   
+  --breakpoint-mmd: 1000px;
   
-  
-  --font-dm: var(--font-dm)
+  --font-dm: var(--font-dm);
+  --font-squada-one: var(--font-squada-one)
 }
 
 
@@ -111,6 +112,15 @@ body{
   }
   .body-2{
     @apply text-[14px];
+  }
+  .body-3{
+    @apply text-[18px];
+  }
+  .body-4{
+    @apply text-[16px];
+  }
+  .body-6{
+    @apply text-[10px];
   }
   .max-wrapper{
     @apply p-4 max-w-300;
