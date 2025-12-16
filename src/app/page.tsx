@@ -1,4 +1,5 @@
 'use client';
+import Category from "@/section/Category/Category";
 import Hero from "@/section/Hero/Hero";
 import TodayNews from "@/section/TodayBlock/TodayNews";
 import Image from "next/image";
@@ -14,6 +15,7 @@ export default function Home() {
     <main>
       <Hero setplayerHeight={setplayerHeight} />
       <TodayNews playerHeight={playerHeight} />
+      <Category />
     </main>
   )
 }
