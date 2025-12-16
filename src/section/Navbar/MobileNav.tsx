@@ -34,7 +34,7 @@ const MobileNav = ({ isOpen, toggle, navLinks }: mobileNavProp) => {
                             const isActive = usePathname() === link.path
                             return <li key={link.id}
                                 className={cn(
-                                    'text-2xl text-secondray/60 font-normal hover:text-black hover:font-bold transition-all duration-300',
+                                    'text-2xl text-secondary/60 font-normal hover:text-black hover:font-bold transition-all duration-300',
                                     isActive && "text-black font-bold"
                                 )}>
                                 <Link href={link.path}>{link.name}</Link>

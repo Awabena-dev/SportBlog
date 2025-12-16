@@ -54,7 +54,7 @@ const Hero = ({ setplayerHeight }: { setplayerHeight: Dispatch<SetStateAction<nu
                 <Image src={"/Hero/basketball.png"} width={715} height={513} alt='basketball' className=' absolute top-0 left-0' />
 
                 {/* Title */}
-                <h1 className='text-[44px] sm:text-[54px] md:text-[80px] xl:text-9xl  bg-linear-to-b from-secondray to-primary-600 font-squada-one bg-clip-text font-bold text-transparent'>
+                <h1 className='text-[44px] sm:text-[54px] md:text-[80px] xl:text-9xl  bg-linear-to-b from-secondary to-primary-600 font-squada-one bg-clip-text font-bold text-transparent'>
                     Top <br />
                     SCORER TO <br />
                     THE FINAL

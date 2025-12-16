@@ -68,7 +68,7 @@ function Navbar() {
                             const isActive = usePathname() === link.path
                             return (
                                 <li key={link.id} className={cn(
-                                    'body-1 text-secondray/60 font-normal hover:text-black hover:font-bold transition-all duration-300',
+                                    'body-1 text-secondary/60 font-normal hover:text-black hover:font-bold transition-all duration-300',
                                     isActive && "text-black font-bold"
                                 )}><Link href={link.path}>{link.name}</Link></li>
                             )

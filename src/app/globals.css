@@ -10,8 +10,8 @@
   --primary-400: #e1e8f0;
   --primary-200: #ebeef3;
   --primary-50: #f8fafc;
-
-  --secondray: #262626;
+  
+  --secondary: #262626;
   
   
   
@@ -22,7 +22,6 @@
   --popover-foreground: oklch(0.129 0.042 264.695);
   --primary: oklch(0.208 0.042 265.755);
   --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
   --secondary-foreground: oklch(0.208 0.042 265.755);
   --muted: oklch(0.968 0.007 247.896);
   --muted-foreground: oklch(0.554 0.046 257.417);
@@ -107,6 +106,16 @@ body{
 
 
 @layer components{
+
+
+  .heading-2{
+    @apply text-[37px];
+    line-height: 38px;
+  }
+  .heading-3{
+    @apply text-[28px];
+    line-height: 38px;
+  }
   .body-1{
     @apply text-[15px];
   }
