@@ -2,11 +2,11 @@ import BigPost from '@/components/BigPost'
 import NewsPost from '@/components/NewsPost'
 import Title from '@/components/SectionTitle'
 import { sportsNews } from '@/content'
-import React from 'react'
+
 
 const TrendingNews = () => {
     return (
-        <section className='w-full min-h-screen bg-primary-200 '>
+        <section className='w-full max-h-fit bg-primary-200 '>
             <div className='max-wrapper flex flex-wrap gap-y-10 py-20 justify-between'>
 
                 {/* Treanding Post */}
@@ -23,11 +23,11 @@ const TrendingNews = () => {
 
                 {/* big post */}
                 <BigPost
-                    img='/hero/3.png'
+                    img='/TrendingNews/4.png'
                     title={sportsNews[0].title}
                     author={sportsNews[0].author}
                     date={sportsNews[0].date}
-                    category='Hourse'
+                    category='Cyceling'
                     summary='' />
             </div>
         </section>

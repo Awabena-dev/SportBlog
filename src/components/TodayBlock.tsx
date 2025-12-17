@@ -6,12 +6,12 @@ import { cn } from '@/lib/utils'
 const blog = [
   {
     title: "Ethiopain runner took the Top four spots kkkkkkkkkkkkkkkkkkk",
-    date: "03 june 2023",
+    date: "2023-06-03",
     cover: "/Hero/african-woman.png"
   },
   {
     title: "Race Car Dixes Driver",
-    date: "03 june 2023",
+    date: "2023-06-03",
     cover: "/Hero/f1-car.png"
   }
 ]

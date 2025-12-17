@@ -1,5 +1,6 @@
 import { SimpleNews } from '@/Type'
 import { cn } from '@/lib/utils'
+import ShortInfo from './ShortInfo'
 
 const SimpleNewsCard = ({ cover, date, title }: SimpleNews) => {
     return (
@@ -14,9 +15,7 @@ const SimpleNewsCard = ({ cover, date, title }: SimpleNews) => {
 
             {/* Content */}
             <div className='relative z-20'>
-                <p className='body-6 text-secondary font-medium line-clamp-1'>
-                    {date}
-                </p>
+                <ShortInfo date={date} target={'date'} />
                 <h2 className='text-black body-4 line-clamp-2'>
                     {title}
                 </h2>
