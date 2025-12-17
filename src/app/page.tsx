@@ -1,5 +1,7 @@
 'use client';
+import ShortInfo from "@/components/ShortInfo";
 import Category from "@/section/Category/Category";
+import FootballNews from "@/section/FootBallNews/FootballNews";
 import Hero from "@/section/Hero/Hero";
 import TodayNews from "@/section/TodayBlock/TodayNews";
 import TrendingNews from "@/section/Trending News/TrendingNews";
@@ -18,6 +20,7 @@ export default function Home() {
       <TodayNews playerHeight={playerHeight} />
       <Category />
       <TrendingNews />
+      <FootballNews />
     </main>
   )
 }
