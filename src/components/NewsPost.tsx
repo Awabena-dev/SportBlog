@@ -16,13 +16,16 @@ const NewsPost = ({ author, date, title, summary, img, variants = 'simple' }: Pr
     return (
         <div className='max-w-125 max-h-37.5 flex gap-x-4'>
             <Image src={img} width={235} height={150} alt='cover'
-                className={cn('w-36.5 md:w-50 aspect-square', variants === 'full' ? 'w-36.5 md:w-50 aspect-video' : 'w-26.5 md:w-18.75')} />
+                className={cn(variants === 'full'
+                    ? 'w-36.5 md:w-50 aspect-video'
+                    : 'w-26.5 md:w-18.75'
+                )} />
 
             <div className={
                 cn('flex flex-col gap-y-2 py-1',
                     variants === 'full'
                         ? 'border-t border-primary-600'
-                        : 'border-t-none ')} >
+                        : 'border-t-0 ')} >
                 {/* author and date */}
                 <ShortInfo author={author} date={date} target={'both'} className='text-secondary' />
 

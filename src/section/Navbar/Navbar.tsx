@@ -80,8 +80,8 @@ function Navbar() {
                 {/* Serch button */}
                 <div className='flex items-center gap-4'>
                     <Button
-                        variant={'primary'}
-                        size={'md'}
+                        variant={'Primary'}
+                        size={'lg'}
                         className='p-2 md:py-2.5 md:px-3.5'>
                         <Search className=' size-5 md:size-4' />
                         <p className=' hidden md:block'>Search</p>
