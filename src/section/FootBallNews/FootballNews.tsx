@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react'
 
 import {
     Carousel,
+    CarouselApi,
     CarouselContent,
     CarouselItem,
     CarouselNext,
@@ -17,7 +18,7 @@ import { cn } from '@/lib/utils'
 
 const FootballNews = () => {
 
-    const [api, setapi] = useState<any>(null);
+    const [api, setapi] = useState<CarouselApi>();
     const [selectedIndex, setselectedIndex] = useState(0);
 
     useEffect(() => {
