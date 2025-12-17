@@ -110,12 +110,20 @@ body{
 @layer components{
 
 
+  .heading-1{
+    @apply text-[60px];
+    line-height: 60px;
+  }
   .heading-2{
     @apply text-[37px];
     line-height: 38px;
   }
   .heading-3{
     @apply text-[28px];
+    line-height: 38px;
+  }
+  .heading-4{
+    @apply text-[24px];
     line-height: 38px;
   }
   .body-1{
