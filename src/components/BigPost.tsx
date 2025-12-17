@@ -1,24 +1,81 @@
-import { PostNewsProps } from '@/Type'
 import React from 'react'
+import { PostNewsProps } from '@/Type'
 import CategorySpan from './CategorySpan'
+import ShortInfo from './ShortInfo'
+import { cva } from 'class-variance-authority'
+import { cn } from '@/lib/utils'
+
+/* ---------------- Types ---------------- */
+
+type PostSize = 'lg' | 'md'
 
 interface Props extends PostNewsProps {
-    category: string,
+    category?: string
+    size?: PostSize
+    className?: string
 }
 
-const BigPost = ({ category, author, date, title, img }: Props) => {
-    return (
-        <div className='relative max-w-full sm:max-w-125 min-h-75 sm:min-h-150 bg-center bg-cover z-10 flex flex-col p-6 justify-between' style={{ backgroundImage: `url(${img})` }}>
-            {/* overlay */}
-            <div className=' absolute top-0 left-0 w-full h-full bg-black/70 -z-10'></div>
-            <CategorySpan>{category}</CategorySpan>
+/* ---------------- Variants ---------------- */
 
-            <div>
-                <div className='flex items-center'>
-                    <p className='text-white'>{`${author} - `}</p>
-                    <p className='text-white'>{date}</p>
+const postVariants = cva(
+    'relative w-full bg-center bg-cover flex flex-col overflow-hidden rounded-xl',
+    {
+        variants: {
+            size: {
+                md: 'sm:max-w-[270px] min-h-[160px] sm:min-h-[300px] p-4',
+                lg: 'sm:max-w-[520px] min-h-[280px] sm:min-h-[420px] p-6',
+            },
+        },
+        defaultVariants: {
+            size: 'lg',
+        },
+    }
+)
+
+/* ---------------- Component ---------------- */
+
+const BigPost = ({
+    category,
+    author,
+    title,
+    img,
+    size = 'lg',
+    className,
+}: Props) => {
+    return (
+        <div
+            className={cn(
+                postVariants({ size }),
+                category ? 'justify-between' : 'justify-end',
+                'group cursor-pointer',
+                className
+            )}
+            style={{ backgroundImage: `url(${img})` }}
+        >
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/70 transition-opacity duration-300 group-hover:bg-black/60" />
+
+            {/* Content */}
+            <div className="relative z-10 flex h-full flex-col justify-between">
+                {category && <CategorySpan>{category}</CategorySpan>}
+
+                <div className="space-y-2">
+                    <ShortInfo
+                        author={author}
+                        target="author"
+                        className="text-primary-50"
+                    />
+
+                    <h2
+                        className={cn(
+                            size === 'lg'
+                                ? 'heading-2 text-white font-bold line-clamp-2'
+                                : 'body-4 text-white font-medium line-clamp-2'
+                        )}
+                    >
+                        {title}
+                    </h2>
                 </div>
-                <h2 className='heading-2 text-white font-bold line-clamp-2'>{title}</h2>
             </div>
         </div>
     )

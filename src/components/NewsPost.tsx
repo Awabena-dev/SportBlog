@@ -1,21 +1,37 @@
 import { PostNewsProps } from '@/Type'
+import { cn } from '@/lib/utils';
 import Image from 'next/image'
 import React from 'react'
+import ShortInfo from './ShortInfo';
 
-const NewsPost = ({ author, date, title, summary, img }: PostNewsProps) => {
+type NewsPostVariant = 'full' | 'simple'
+
+
+interface Props extends PostNewsProps {
+    variants?: NewsPostVariant;
+}
+
+
+const NewsPost = ({ author, date, title, summary, img, variants = 'simple' }: Props) => {
     return (
         <div className='max-w-125 max-h-37.5 flex gap-x-4'>
-            <Image src={img} width={235} height={150} alt='cover' className='w-36.5 md:w-50 aspect-video' />
+            <Image src={img} width={235} height={150} alt='cover'
+                className={cn('w-36.5 md:w-50 aspect-square', variants === 'full' ? 'w-36.5 md:w-50 aspect-video' : 'w-26.5 md:w-18.75')} />
 
-            <div className='flex flex-col gap-y-2 py-1 border-t border-primary-600'>
+            <div className={
+                cn('flex flex-col gap-y-2 py-1',
+                    variants === 'full'
+                        ? 'border-t border-primary-600'
+                        : 'border-t-none ')} >
                 {/* author and date */}
-                <div className='flex items-center'>
-                    <p className='text-secondary/60 body-6 font-medium'>{`${author} -`}</p>
-                    <p className='text-secondary/60 body-6 font-medium'>{date}</p>
-                </div>
+                <ShortInfo author={author} date={date} target={'both'} className='text-secondary' />
 
                 {/* title */}
-                <h2 className='body-3 text-secondray font-bold line-clamp-2'>{title}</h2>
+                <h2 className={cn(variants === 'full'
+                    ? 'body-3 text-secondray font-bold line-clamp-2'
+                    : 'body-5 text-secondray font-semibold line-clamp-2')}>
+                    {title}
+                </h2>
 
                 {/* summary */}
                 <p className='body-5 text-secondary-light line-clamp-3'>{summary}</p>
