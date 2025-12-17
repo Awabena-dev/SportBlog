@@ -20,11 +20,13 @@ const buttonVariants = cva(
         ghost:
           "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
         link: "text-primary underline-offset-4 hover:underline",
+        Primary: 'bg-primary-600 text-primary-50 body-5',
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",
         sm: "h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5",
         lg: "h-10 rounded-md px-6 has-[>svg]:px-4",
+        xl: "h-10 px-12 rounded-[6px] ",
         moveIcon: 'w-[50px] h-[70px] ',
         navBtn: 'size-8.5 rounded-full',
         icon: "size-9",

@@ -28,7 +28,8 @@ const TrendingNews = () => {
                     author={sportsNews[0].author}
                     date={sportsNews[0].date}
                     category='Cyceling'
-                    summary='' />
+                    summary=''
+                    size='lg' />
             </div>
         </section>
     )
