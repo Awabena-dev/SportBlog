@@ -12,6 +12,7 @@
   --primary-50: #f8fafc;
   
   --secondary: #262626;
+  --secondary-light: #696868;
   
   
   
@@ -91,6 +92,7 @@
   --color-primary-50: #f8fafc;
   
   --color-secondray: #262626;
+  --color-secondary-light: #696868;
   
   --breakpoint-mmd: 1000px;
   
@@ -127,6 +129,9 @@ body{
   }
   .body-4{
     @apply text-[16px];
+  }
+  .body-5{
+    @apply text-[12px];
   }
   .body-6{
     @apply text-[10px];

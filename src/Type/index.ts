@@ -4,3 +4,11 @@ export interface SimpleNews {
     title: string;
     date: string
 }
+
+export interface PostNewsProps{
+    title: string
+    summary: string
+    date: string
+    author:string
+    img: string
+}
