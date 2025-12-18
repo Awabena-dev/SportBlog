@@ -15,7 +15,7 @@ import ShortInfo from './ShortInfo'
 
 const ArticlePost = ({ author, date, title, summary, img, category, authorImg }: ArticlePostType) => {
     return (
-        <Card className='w-full md:max-w-92.5 shadow-none'>
+        <Card className='group w-full md:max-w-92.5 shadow-none'>
             <CardHeader>
                 <div className='relative'>
                     <Image

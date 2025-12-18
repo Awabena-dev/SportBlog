@@ -19,9 +19,9 @@ const SportArticles = () => {
                     <CarouselContent>
                         {Array(7).fill('_').map((art, index) => {
                             return (
-                                <CarouselItem className='basis-full sm:basis-1/2 md:basis-1/3'>
+                                <CarouselItem key={index} className='basis-full sm:basis-1/2 md:basis-1/3'>
                                     <ArticlePost
-                                        key={index}
+
                                         category={"foot ball"}
                                         img={sportsNews[0].img}
                                         title={sportsNews[0].title}
