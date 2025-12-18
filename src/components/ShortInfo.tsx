@@ -41,7 +41,7 @@ function formatText(
 
     if (target === 'date') return dateText
     if (target === 'author') return authorText
-    console.log(`${authorText} - ${dateText}`)
+
     return `${authorText} - ${dateText}`
 }
 
