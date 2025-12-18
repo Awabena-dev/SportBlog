@@ -12,3 +12,13 @@ export interface PostNewsProps{
     author:string
     img: string
 }
+
+export interface ArticlePostType{
+    category: string
+    title: string
+    summary: string
+    date: string
+    author:string
+    authorImg: string
+    img: string
+}

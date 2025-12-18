@@ -4,6 +4,8 @@ import Category from "@/section/Category/Category";
 import FootballNews from "@/section/FootBallNews/FootballNews";
 import Hero from "@/section/Hero/Hero";
 import RecentNews from "@/section/Recent_News/RecentNews";
+import SportArticles from "@/section/SportArticles/SportArticles";
+import SubscribeSection from "@/section/SubscribeSection/SubscribeSection";
 import TodayNews from "@/section/TodayBlock/TodayNews";
 import TrendingNews from "@/section/Trending News/TrendingNews";
 import Image from "next/image";
@@ -23,6 +25,8 @@ export default function Home() {
       <TrendingNews />
       <FootballNews />
       <RecentNews />
+      <SportArticles />
+      <SubscribeSection />
     </main>
   )
 }

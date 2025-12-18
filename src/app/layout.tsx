@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { DM_Sans, Squada_One } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/section/Navbar/Navbar";
+import Footer from "@/section/Footer/Footer";
 
 
 
@@ -37,6 +38,7 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

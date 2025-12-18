@@ -31,8 +31,8 @@ const NewsPost = ({ author, date, title, summary, img, variants = 'simple' }: Pr
 
                 {/* title */}
                 <h2 className={cn(variants === 'full'
-                    ? 'body-3 text-secondray font-bold line-clamp-2'
-                    : 'body-5 text-secondray font-semibold line-clamp-2')}>
+                    ? 'body-3 text-secondary font-bold line-clamp-2'
+                    : 'body-5 text-secondary font-semibold line-clamp-2')}>
                     {title}
                 </h2>
 
