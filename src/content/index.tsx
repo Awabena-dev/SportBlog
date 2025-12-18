@@ -28,7 +28,7 @@ export const sportsNews = [
 export const footballNews = [
     {
         category: "football",
-        date: "25-06-03",
+        date: "2025-06-03",
         title: "Real Madrid Secure Dramatic Late Victory in Champions League Clash",
         summary:
             "Real Madrid snatched a dramatic late victory in a thrilling Champions League encounter, showcasing their resilience and experience on the European stage.",
@@ -36,7 +36,7 @@ export const footballNews = [
     },
     {
         category: "football",
-        date: "25-06-02",
+        date: "2025-06-02",
         title: "Manchester City Continue Dominance with Convincing League Win",
         summary:
             "Manchester City delivered another dominant performance in the league, strengthening their position at the top and sending a strong message to their rivals.",
@@ -44,7 +44,7 @@ export const footballNews = [
     },
     {
         category: "football",
-        date: "25-06-01",
+        date: "2025-06-01",
         title: "Barcelona Young Star Shines in Crucial Away Victory",
         summary:
             "A rising Barcelona talent stole the spotlight with an outstanding performance, leading the team to a crucial away win and earning praise from fans and analysts.",
@@ -52,7 +52,7 @@ export const footballNews = [
     },
     {
         category: "football",
-        date: "25-05-30",
+        date: "2025-05-30",
         title: "Liverpool Clinch Last-Minute Draw in Intense Derby Match",
         summary:
             "Liverpool managed to rescue a last-minute draw in a heated derby, keeping their hopes alive in a fiercely contested season.",

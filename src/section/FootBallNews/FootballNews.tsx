@@ -55,12 +55,12 @@ const FootballNews = () => {
                     </CarouselItem>
                 </CarouselContent>
                 <div className='w-full  flex items-center justify-end py-4'>
-                    <div className='flex items-center gap-x-4'>
+                    <div className='flex items-center gap-x-1 sm:gap-x-4'>
                         <CarouselPrevious
 
                             variant='secondary'
                             size={'moveIcon'}
-                            className=' rounded-[5px] text-primary-50 w-17.5 h-12.5 relative'>
+                            className=' rounded-[5px] text-primary-50 w-10 sm:w-17.5 h-8 sm:h-12.5 relative'>
 
                         </CarouselPrevious>
                         {[1, 2, 3, 4].map((btn, index) => (
@@ -76,7 +76,7 @@ const FootballNews = () => {
                         <CarouselNext
                             variant='secondary'
                             size={'moveIcon'}
-                            className=' rounded-[5px] text-primary-50 w-17.5 h-12.5 relative' />
+                            className=' rounded-[5px] text-primary-50 w-10 sm:w-17.5 h-8 sm:h-12.5 relative' />
                     </div>
                 </div>
             </Carousel>

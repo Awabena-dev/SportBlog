@@ -1,33 +1,54 @@
-import React from 'react'
 import SimpleNewsCard from './SimpleNewsCard'
 import { cn } from '@/lib/utils'
 
-// Placeholder 
-const blog = [
+// ---------------- Types ----------------
+type Blog = {
+  id: number
+  title: string
+  date: string
+  cover: string
+}
+
+// ---------------- Placeholder ----------------
+const blogs: Blog[] = [
   {
-    title: "Ethiopain runner took the Top four spots kkkkkkkkkkkkkkkkkkk",
+    id: 1,
+    title: "Ethiopian runner took the top four spots",
     date: "2023-06-03",
-    cover: "/Hero/african-woman.png"
+    cover: "/Hero/african-woman.png",
   },
   {
-    title: "Race Car Dixes Driver",
+    id: 2,
+    title: "Race car driver dominates the track",
     date: "2023-06-03",
-    cover: "/Hero/f1-car.png"
-  }
+    cover: "/Hero/f1-car.png",
+  },
 ]
 
+// ---------------- Component ----------------
+interface TodayBlockProps {
+  className?: string
+}
 
-const TodayBlock = ({ className }: { className?: string }) => {
+const TodayBlock = ({ className }: TodayBlockProps) => {
   return (
-    <div className={cn("", className)}>
-      <span className='px-4 py-1 bg-primary-400 rounded-[3px] text-primary-600 font-medium'>Today</span>
-      {/* Blog */}
-      <div className='flex flex-row flex-wrap gap-x-6 mmd:flex-col gap-y-8 mt-10'>
-        {blog.map((blog) => (
-          <SimpleNewsCard title={blog.title} date={blog.date} cover={blog.cover} key={blog.title} />
+    <section className={cn(className)}>
+      <h3 className="inline-block px-4 py-1 bg-primary-400 rounded-[3px] text-primary-600 font-medium">
+        Today
+      </h3>
+
+      {/* Blog list */}
+      <div className="mt-10 flex flex-row flex-wrap gap-x-6 gap-y-8 mmd:flex-col">
+        {blogs.map(blog => (
+          <SimpleNewsCard
+            key={blog.id}
+            title={blog.title}
+            date={blog.date}
+            cover={blog.cover}
+          />
         ))}
       </div>
-    </div>
+    </section>
   )
 }
 

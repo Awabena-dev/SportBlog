@@ -16,7 +16,14 @@ const TrendingNews = () => {
                     {/* mapping on news !max 3 news */}
                     <div className='flex flex-col gap-y-6 mt-6'>
                         {sportsNews.map((post) => (
-                            <NewsPost key={post.title} img={post.img} author={post.author} date={post.date} title={post.title} summary={post.summary} />
+                            <NewsPost
+                                key={post.title}
+                                img={post.img}
+                                author={post.author}
+                                date={post.date}
+                                title={post.title}
+                                summary={post.summary}
+                                variant='full' />
                         ))}
                     </div>
                 </div>
