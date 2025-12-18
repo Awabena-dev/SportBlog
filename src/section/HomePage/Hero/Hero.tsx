@@ -32,7 +32,7 @@ const Hero = ({ setplayerHeight }: { setplayerHeight: Dispatch<SetStateAction<nu
 
 
     return (
-        <section className='min-h-full w-full py-20 pt-30'>
+        <section className='min-h-full w-full py-20 pt-5'>
             <div className='relative max-wrapper h-full flex justify-between'>
 
                 {/* Player and content */}
