@@ -22,3 +22,10 @@ export interface ArticlePostType{
     authorImg: string
     img: string
 }
+
+export interface CategoryProp {
+    id: any,
+    name: string
+    cover: string,
+    slug: string,
+}

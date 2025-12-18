@@ -1,13 +1,13 @@
 'use client';
 import ShortInfo from "@/components/ShortInfo";
-import Category from "@/section/Category/Category";
-import FootballNews from "@/section/FootBallNews/FootballNews";
-import Hero from "@/section/Hero/Hero";
-import RecentNews from "@/section/Recent_News/RecentNews";
-import SportArticles from "@/section/SportArticles/SportArticles";
-import SubscribeSection from "@/section/SubscribeSection/SubscribeSection";
-import TodayNews from "@/section/TodayBlock/TodayNews";
-import TrendingNews from "@/section/Trending News/TrendingNews";
+import Category from "@/section/HomePage/Category/Category";
+import FootballNews from "@/section/HomePage/FootBallNews/FootballNews";
+import Hero from "@/section/HomePage/Hero/Hero";
+import RecentNews from "@/section/HomePage/Recent_News/RecentNews";
+import SportArticles from "@/section/HomePage/SportArticles/SportArticles";
+import SubscribeSection from "@/section/HomePage/SubscribeSection/SubscribeSection";
+import TodayNews from "@/section/HomePage/TodayBlock/TodayNews";
+import TrendingNews from "@/section/HomePage/Trending News/TrendingNews";
 import Image from "next/image";
 import { useState } from "react";
 

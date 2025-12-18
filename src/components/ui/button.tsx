@@ -31,7 +31,7 @@ const buttonVariants = cva(
         navBtn: 'size-8.5 rounded-full',
         icon: "size-9",
         "icon-sm": "size-8",
-        "icon-lg": "size-10",
+        "icon-lg": "size-15",
       },
     },
     defaultVariants: {
