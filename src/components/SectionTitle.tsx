@@ -1,8 +1,16 @@
-import React, { ReactNode } from 'react'
+import { ReactNode } from 'react'
+import { cn } from '@/lib/utils'
 
-const Title = ({ children }: { children?: ReactNode }) => {
+interface TitleProps {
+    children: ReactNode
+    className?: string
+}
+
+const Title = ({ children, className }: TitleProps) => {
     return (
-        <h2 className='heading-3 text-secondary font-medium'>{children}</h2>
+        <h2 className={cn('heading-3 text-secondary font-medium', className)}>
+            {children}
+        </h2>
     )
 }
 

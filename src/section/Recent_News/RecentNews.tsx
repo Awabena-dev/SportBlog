@@ -42,7 +42,7 @@ const RecentNews = () => {
                                     date={bigPost.date}
                                     title={bigPost.title}
                                     summary=''
-                                    variants='simple' />
+                                    variant='simple' />
                             ))}
                             <Button size={'xl'} variant={'Primary'} className='max-w-fit x cursor-pointer'>
                                 More

@@ -109,7 +109,14 @@ body{
 
 @layer components{
 
+  .text-gradient{
+    @apply bg-linear-to-b from-secondary to-primary-600 bg-clip-text text-transparent;
+  }
+  
 
+  .display-1{
+    @apply text-[44px] sm:text-[54px] md:text-[80px] xl:text-9xl;
+  }
   .heading-1{
     @apply text-[60px];
     line-height: 60px;

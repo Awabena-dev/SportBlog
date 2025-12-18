@@ -1,21 +1,16 @@
-import React from 'react'
 import { PostNewsProps } from '@/Type'
 import CategorySpan from './CategorySpan'
 import ShortInfo from './ShortInfo'
 import { cva } from 'class-variance-authority'
 import { cn } from '@/lib/utils'
 
-/* ---------------- Types ---------------- */
-
 type PostSize = 'lg' | 'md'
 
-interface Props extends PostNewsProps {
+interface BigPostProps extends PostNewsProps {
     category?: string
     size?: PostSize
     className?: string
 }
-
-/* ---------------- Variants ---------------- */
 
 const postVariants = cva(
     'relative w-full bg-center bg-cover flex flex-col overflow-hidden rounded-xl',
@@ -26,22 +21,11 @@ const postVariants = cva(
                 lg: 'sm:max-w-[520px] min-h-[280px] sm:min-h-[420px] p-6',
             },
         },
-        defaultVariants: {
-            size: 'lg',
-        },
+        defaultVariants: { size: 'lg' },
     }
 )
 
-/* ---------------- Component ---------------- */
-
-const BigPost = ({
-    category,
-    author,
-    title,
-    img,
-    size = 'lg',
-    className,
-}: Props) => {
+const BigPost = ({ category, author, title, img, size = 'lg', className }: BigPostProps) => {
     return (
         <div
             className={cn(
@@ -60,11 +44,13 @@ const BigPost = ({
                 {category && <CategorySpan>{category}</CategorySpan>}
 
                 <div className="space-y-2">
-                    <ShortInfo
-                        author={author}
-                        target="author"
-                        className="text-primary-50"
-                    />
+                    {author && (
+                        <ShortInfo
+                            author={author}
+                            target="author"
+                            className="text-primary-50"
+                        />
+                    )}
 
                     <h2
                         className={cn(

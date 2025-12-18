@@ -2,25 +2,35 @@ import { SimpleNews } from '@/Type'
 import { cn } from '@/lib/utils'
 import ShortInfo from './ShortInfo'
 
-const SimpleNewsCard = ({ cover, date, title }: SimpleNews) => {
+interface SimpleNewsCardProps extends SimpleNews {
+    className?: string
+}
+
+const SimpleNewsCard = ({
+    cover,
+    date,
+    title,
+    className,
+}: SimpleNewsCardProps) => {
     return (
-        <div
+        <article
             className={cn(
-                'relative w-67.5 h-57.5 bg-cover bg-center px-8 py-4 rounded-xl flex flex-col justify-end overflow-hidden'
+                'relative w-67.5 h-57.5 rounded-xl overflow-hidden flex flex-col justify-end px-8 py-4 bg-cover bg-center',
+                className
             )}
             style={{ backgroundImage: `url(${cover})` }}
         >
             {/* Overlay */}
-            <div className='absolute inset-0 z-10 bg-linear-to-b from-transparent to-primary-50' />
+            <div className="absolute inset-0 z-10 bg-linear-to-b from-transparent to-primary-50" />
 
             {/* Content */}
-            <div className='relative z-20'>
-                <ShortInfo date={date} target={'date'} />
-                <h2 className='text-black body-4 line-clamp-2'>
+            <div className="relative z-20">
+                <ShortInfo date={date} target="date" />
+                <h3 className="body-4 text-black line-clamp-2">
                     {title}
-                </h2>
+                </h3>
             </div>
-        </div>
+        </article>
     )
 }
 

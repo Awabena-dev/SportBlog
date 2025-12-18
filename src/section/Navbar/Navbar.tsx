@@ -3,14 +3,13 @@ import { Button } from '@/components/ui/button'
 import { Search, Menu } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import MobileNav from './MobileNav'
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 
 
-// NavLink
+// Navbar Links Update Her
 const navLinks = [
     {
         id: 1,
@@ -40,7 +39,7 @@ const navLinks = [
     {
         id: 6,
         path: '/Articales',
-        name: "Sport Articale"
+        name: "Articale"
     },
 ]
 
@@ -48,10 +47,10 @@ const navLinks = [
 function Navbar() {
 
     const [isOpen, setisOpen] = useState(false);
+    const path = usePathname();
 
-    const toggle = () => {
-        setisOpen(!isOpen);
-    };
+    // toggle the open/close menu.
+    const toggle = () => { setisOpen(prev => !prev); };
 
     return (
         <header className='fixed bg-primary-50 top-0 left-0 w-full  h-23 z-99'>
@@ -60,12 +59,13 @@ function Navbar() {
                 {/* Logo */}
                 <Image src={"/Layout/logo.svg"} width={154} height={42} alt='Logo' className='w-24 h-6.5 md:w-38.5 md:h-10.5' />
 
-                {/* Navlinks */}
+                {/* Desktop Navigation */}
                 <nav>
                     <ul className=' hidden md:flex items-center gap-3.5'>
                         {navLinks.map((link) => {
 
-                            const isActive = usePathname() === link.path
+                            const isActive = path === link.path;
+
                             return (
                                 <li key={link.id} className={cn(
                                     'body-1 text-secondary/60 font-normal hover:text-black hover:font-bold transition-all duration-300',
@@ -85,7 +85,6 @@ function Navbar() {
                         className='p-2 md:py-2.5 md:px-3.5'>
                         <Search className=' size-5 md:size-4' />
                         <p className=' hidden md:block'>Search</p>
-
                     </Button>
 
                     {/* Menu */}
@@ -93,7 +92,8 @@ function Navbar() {
                         <Menu className='size-5' />
                     </div>
                 </div>
-                {/* Mobile Navbar */}
+
+                {/* Mobile Navbar(HumberMenu) */}
                 <MobileNav isOpen={isOpen} toggle={toggle} navLinks={navLinks} />
 
             </div>
