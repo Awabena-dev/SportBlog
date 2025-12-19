@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { DM_Sans, Squada_One } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/section/Layout/Footer/Footer"
-import Footer from "@/section/Layout/Navbar/Navbar";
+import Navbar from "@/section/Layout/Navbar/Navbar"
+import Footer from "@/section/Layout/Footer/Footer";
 
 
 
